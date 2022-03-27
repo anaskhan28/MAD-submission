@@ -1,21 +1,24 @@
-package com.example.animation
+package com.example.myanimation;
 
-import android.os.Bundle
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity;
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
+public class MainActivity extends AppCompatActivity {
 
-}
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
     public void rotate(View view)
     {
         TextView txt=(TextView)  findViewById(R.id.animtxt);
         txt.animate().rotationBy(45).setDuration(2000);
     }
+
     public void translate(View view)
     {
         TextView txt=(TextView)  findViewById(R.id.animtxt);
@@ -30,5 +33,6 @@ class MainActivity : AppCompatActivity() {
     {
         TextView txt=(TextView)  findViewById(R.id.animtxt);
         txt.animate().alpha(0).setDuration(1000);
-    }
+}
+
 }
